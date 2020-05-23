@@ -5,7 +5,7 @@
 Using the T1 pins on my SKR 1.3 board I was able to configure marlin to show chamber temp from a spare 3950 thermister.
 You need to define the chamber probe pin like this in your configuration.h thermister settings. The second line has to be added.
 
-#define TEMP_SENSOR_CHAMBER 1
+#define TEMP_SENSOR_CHAMBER 1 <br>
 #define TEMP_CHAMBER_PIN TEMP_1_PIN
 
 ## Changes in this fork
