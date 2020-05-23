@@ -1,39 +1,12 @@
 # Plugin for OctoPrint - displays temperatures on navbar
 
-![NavbarTemp](images/navbar.png?raw=true) 
+![NavbarTemp](images/navbar_chamber.png?raw=true) 
 
+Using the T1 pins on my SKR 1.3 board I was able to configure marlin to show chamber temp from a spare 3950 thermister.
+You need to define the chamber probe pin like this in your configuration.h thermister settings. The second line has to be added.
 
-## Setup
+#define TEMP_SENSOR_CHAMBER 1
+#define TEMP_CHAMBER_PIN TEMP_1_PIN
 
-Install the plugin using Plugin Manager from Settings
-
-## Need new platform support?
-If you need support for additional platform, please inform us and add such information:
-* How to read temperature
-* How to define platform type
-
-And be ready for testing.
-
-## Custom command
-Plugin is supporting up to one custom command, in navbar will be displayed raw output 
-of command.
-Example:
-![NavbarTemp](images/custom_cmd_cfg1.png?raw=true) 
-
-![NavbarTemp](images/custom_cmd_bar1.png?raw=true) 
-
-
-## Change notes:
-v 0.14 
-- Temperature is visible, connection is no needed #47 #65
-- Fix for python 3 - #68  
-- Support for shorter tool names - #29
-- Fix for settings saving reported in #47
-- Added possibility to remove target temperature output #57
-- Added possibility to configure soc name on navbar  #43
-
-v 0.13 
-- added support for custom commands  
-
-v 0.11 
-- added support for all platforms running under Armbian  
+## Changes in this fork
+Added chamber temp to navbar using octoprint chamberTemp variables.
